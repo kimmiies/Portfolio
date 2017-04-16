@@ -57,7 +57,8 @@ body {
     width: 100%;
     .list-counter {
       margin: 0;
-      display: inline-block;
+      // display: inline-block;
+      display: none;
     }
     .list-line {
       margin: 3px 0;
@@ -65,6 +66,15 @@ body {
       background: black;
       height: 4px;
       width: 60px;
+    }
+    &:hover {
+      .list-counter {
+        display: inline-block;
+        //  functionality goes here. ease in!
+      }
+      .list-line {
+        background: violet;
+      }
     }
   }
 }
@@ -121,18 +131,6 @@ body {
 
 
 
-// .list-item {
-//  .list-counter {
-//   //  display: none;
-//    font-size: 14px;
-//  }
-//  &:hover {
-//    .list-counter {
-//      display: block;
-//     //  functionality goes here. ease in!
-//    }
-//  }
-// }
 
 .typed-cursor{
 	opacity: 1;

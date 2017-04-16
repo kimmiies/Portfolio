@@ -21,4 +21,15 @@ Anchor links default to blue:
 
 
 letter-spacing
-  - it's a thing! 
+  - it's a thing!
+
+
+Having page fit browser height
+  - set the body to have a fixed position and added in some javascript functionality
+  - My understanding. When the window experiences a resize event it will perform the autoResize function, which sets the height of the body to the innerHeight of the window
+
+  function autoResizeDiv(){
+    document.getElementById('main').style.height = window.innerHeight +'px';
+  }
+  window.onresize = autoResizeDiv;
+  autoResizeDiv();

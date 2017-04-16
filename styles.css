@@ -44,13 +44,17 @@ body {
     width: 100%; }
     .project-list .list-item .list-counter {
       margin: 0;
-      display: inline-block; }
+      display: none; }
     .project-list .list-item .list-line {
       margin: 3px 0;
       display: inline-block;
       background: black;
       height: 4px;
       width: 60px; }
+    .project-list .list-item:hover .list-counter {
+      display: inline-block; }
+    .project-list .list-item:hover .list-line {
+      background: violet; }
 
 .main {
   overflow: hidden;

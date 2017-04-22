@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway|Stint+Ultra+Expanded|Titillium+Web|Ubuntu" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-    <script src="bower_components/aos/dist/aos.js"></script> -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <!-- <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
+
   </head>
 
   <body id='main'>
@@ -20,26 +21,25 @@
   <!-- Name  -->
       <div class='nav-left'>
         <h1>Kimberly Oleiro</h1>
-        <span class="element"></span>
       </div>
 
   <!-- Projects  -->
       <div class='nav-right'>
         <div>
-          <h2>Projects</h2>
+          <h2>Projects</h2>  
         </div>
 
         <div>
           <ul class='project-list'>
-            <li class="list-item" data-aos="fade-left">
+            <li class="list-item">
               <p class="list-counter">01/03</p>
               <figure class="list-line"></figure>
             </li>
-            <li class="list-item" data-aos="fade-left">
+            <li class="list-item" >
               <p class="list-counter">02/03</p>
               <figure class="list-line"></figure>
             </li>
-            <li class="list-item" data-aos="fade-left">
+            <li class="list-item">
               <p class="list-counter">03/03</p>
               <figure class="list-line"></figure>
             </li>
@@ -68,7 +68,9 @@
         </div>
 
         <div class='main-skills'>
-          <h5>Technical Stuff: ___ </h5>
+          <h5>Technical Stuff: <span class='element'></span> </h5>
+          <!-- <div class='element'></div> -->
+          <div class='typed-cursor'></div>
         </div>
       </div>
     </main>
@@ -99,13 +101,22 @@
       document.getElementById('main').style.height = window.innerHeight +'px';
     }
     window.onresize = autoResizeDiv();
-
   </script>
-  <script src="typed.js"></script>
 
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+  <script src="typed.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        Typed.new('.element', {
+          strings: ["Javascript.", "ReactJS.", "Ruby.", "Rails.", "JQuery.", "CSS3.", "SASS.","HTML5.", "Git.", "Grunt.", "Gulp.", "Node.js.", "Express.js.", "Jasmine.", "Photoshop.", "Sketch."],
+          typeSpeed: 0
+        });
+    });
+  </script>
+
 
 </html>

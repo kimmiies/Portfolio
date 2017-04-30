@@ -1,6 +1,37 @@
-$mobile: "(max-width: 767px)";
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+// $mobile: "(max-width: 767px)";
+// $tablet: "(min-width: 768px) and (max-width: 1023px)";
+// $desktop: "(min-width: 1024px)";
+
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tabletDesktop {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+
 
 html, body {
   height: 100%;
@@ -12,16 +43,20 @@ body {
   position: fixed;
   letter-spacing: 6px;
   margin: 0;
-  @media #{$mobile} {
+  @include mobile {
     background-color: papayawhip;
   }
 
-  @media #{$tablet} {
-   background-color: lightgreen;
-  }
+  // @include tablet {
+  //  background-color: lightgreen;
+  // }
+  //
+  // @include desktop {
+  //   background-color: violet;
+  // }
 
-  @media #{$desktop} {
-    background-color: violet;
+  @include tabletDesktop {
+    background-color: rgb(156, 214, 219);
   }
 
   header {

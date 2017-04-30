@@ -1,3 +1,7 @@
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
 html, body {
   height: 100%;
 }
@@ -8,6 +12,17 @@ body {
   position: fixed;
   letter-spacing: 6px;
   margin: 0;
+  @media #{$mobile} {
+    background-color: papayawhip;
+  }
+
+  @media #{$tablet} {
+   background-color: lightgreen;
+  }
+
+  @media #{$desktop} {
+    background-color: violet;
+  }
 
   header {
     height: 20%;
@@ -100,7 +115,7 @@ body {
   margin: 0 20px;
   .main-left {
     float: left;
-    width: 100%;
+    width: 50%;
     figure {
       margin: 0;
       text-align: center;
@@ -112,7 +127,7 @@ body {
   .main-right {
     padding-top: 30px;
     float: left;
-    width: 100%;
+    width: 50%;
     .main-copy {
       padding: 30px 0;
     }
@@ -122,17 +137,19 @@ body {
   }
 }
 
-@media screen and (min-width: 660px) {
-    body {
-        background-color: lightgreen;
-        .main-left {
-          width: 50%;
-        }
-        .main-right {
-          width: 50%;
-        }
-    }
-}
+// @media screen and (max-width: 660px) {
+//     body {
+//         background-color: papayawhip;
+//         .main-left {
+//           display: none;
+//         }
+//         .main-right {
+//           width: 100%;
+//         }
+//     }
+// }
+
+
 
 .footer {
   position: relative;

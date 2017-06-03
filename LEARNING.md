@@ -49,4 +49,26 @@ CSS Animations
   - @keyframe animation-name property will let you specify what the current style is and the new style
   - animation properties define what happens in between
       ie. duration
-      
+
+Iteration 3
+^^^^^^^^^^^
+
+Media Queries with Sass
+  - https://davidwalsh.name/write-media-queries-sass
+  - Mixins: Groups of styles that can be reused throughout your code
+  - Cleaning up the code by first defining variables to define media queries, then using the power of Sass to nest them, then writing mixins to make it easier to read :D
+
+      $tablet-width: 768px;
+      $desktop-width: 1024px;
+
+      @mixin mobile {
+        @media (max-width: #{$tablet-width - 1px}) {
+          @content;
+        }
+      }
+
+      body {
+        font-family: 'PT Sans', sans-serif;
+        @include mobile {
+          background-color: papayawhip;
+        }

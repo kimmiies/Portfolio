@@ -1,37 +1,4 @@
-// $mobile: "(max-width: 767px)";
-// $tablet: "(min-width: 768px) and (max-width: 1023px)";
-// $desktop: "(min-width: 1024px)";
-
-
-$tablet-width: 768px;
-$desktop-width: 1024px;
-
-@mixin mobile {
-  @media (max-width: #{$tablet-width - 1px}) {
-    @content;
-  }
-}
-
-
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
-@mixin tabletDesktop {
-  @media (min-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
-
+@import './variables.scss';
 
 html, body {
   height: 100%;
@@ -39,57 +6,73 @@ html, body {
 
 body {
   // background: papayawhip;
-  font-family: 'PT Sans', sans-serif;
+  // font-family: 'PT Sans', sans-serif;
+  font-family: 'Droid Sans Mono', monospace;
   position: fixed;
   letter-spacing: 6px;
   margin: 0;
+
   @include mobile {
     background-color: papayawhip;
   }
 
-  // @include tablet {
-  //  background-color: lightgreen;
-  // }
-  //
-  // @include desktop {
-  //   background-color: violet;
-  // }
-
   @include tabletDesktop {
-    background-color: rgb(156, 214, 219);
-  }
+    background-color: rgb(85, 154, 222);
+  };
 
   header {
-    height: 20%;
+    height: 15%;
+    @include tabletDesktop {
+      height: 20%;
+    }
   }
 
   main {
-    height: 80%;
+    height: 85%;
+    @include tabletDesktop {
+      height: 80%;
+    }
+  }
+
+  h1, h2, h4, h5, h6, p {
+    margin: 0;
   }
 
   h1 {
-    font-size: 50px;
-    margin: 0;
+    font-size: 26px;
+    @include tabletDesktop {
+      font-size: 65px;
+    }
   }
   h2 {
-    font-size: 30px;
-    margin: 0;
+    font-size: 10px;
+    @include tabletDesktop {
+      font-size: 35px;
+    }
   }
   h4 {
-    font-size: 32px;
-    margin: 0;
+    font-size: 20px;
+    @include tabletDesktop {
+      font-size: 32px;
+    }
   }
   h5 {
-    font-size: 26px;
-    margin: 0;
+    font-size: 16px;
+    @include tabletDesktop {
+      font-size: 26px;
+    }
   }
   h6 {
-    font-size: 22px;
-    margin: 0;
+    font-size: 16px;
+    @include tabletDesktop {
+      font-size: 22px;
+    }
   }
   p {
-    font-size: 14px;
-    margin: 0;
+    font-size: 8px;
+    @include tabletDesktop {
+      font-size: 16px;
+    }
   }
 }
 
@@ -98,24 +81,32 @@ body {
   margin: 10px;
   .nav-left {
     float: left;
-    width: 80%;
+    width: 65%;
+    @include tabletDesktop {
+      width: 80%;
+    }
   }
   .nav-right {
     float: right;
-    width: 20%;
+    width: 35%;
     text-align: right;
     text-transform: uppercase;
+    letter-spacing: 4.2px;
+    @include tabletDesktop {
+      width: 20%;
+      letter-spacing: inherit;
+    }
   }
 }
 
 .project-list {
   list-style-type: none;
   margin: 0;
+  padding: 10px 0 0 0;
   .list-item {
     width: 100%;
     .list-counter {
       margin: 0;
-      // display: inline-block;
       display: none;
     }
     .list-line {
@@ -123,9 +114,11 @@ body {
       display: inline-block;
       background: black;
       height: 4px;
-      width: 60px;
+      width: 35px;
+      @include tabletDesktop {
+        width: 60px;
+      }
     }
-
 
     &:hover {
       .list-counter {
@@ -147,51 +140,71 @@ body {
 
 .main {
   overflow: hidden;
-  margin: 0 20px;
-  .main-left {
-    float: left;
-    width: 50%;
-    figure {
-      margin: 0;
-      text-align: center;
-      img {
-        width: 84%;
+  margin: 0 10px;
+  .main-body {
+    overflow: hidden;
+    // @include tabletDesktop {
+    //   height: 100%;
+    // }
+    .main-left {
+      display: none;
+      @include tabletDesktop {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+      };
+      @include desktop {
+        width: 50%;
+      }
+      figure {
+        margin: 0;
+        text-align: left;
+        position: relative;
+        img {
+          width: 84%;
+          @include tabletDesktop {
+            position: absolute;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .main-right {
+      float: left;
+      width: 100%;
+      @include desktop {
+        padding-top: 30px;
+        float: right;
+        width: 50%;
+      };
+      .main-copy {
+        padding: 30px 0;
+      }
+      .main-skills {
+        width: 90%;
+        @include tabletDesktop {
+          padding-top: 30px;
+        }
       }
     }
   }
-  .main-right {
-    padding-top: 30px;
-    float: left;
-    width: 50%;
-    .main-copy {
-      padding: 30px 0;
-    }
-    .main-skills {
-      padding-top: 30px;
-    }
+  .main-footer {
+    // position: relative;
+    overflow: hidden;
+    clear: both;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    @include tabletDesktop{
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    };
   }
 }
 
-// @media screen and (max-width: 660px) {
-//     body {
-//         background-color: papayawhip;
-//         .main-left {
-//           display: none;
-//         }
-//         .main-right {
-//           width: 100%;
-//         }
-//     }
-// }
-
-
-
-.footer {
-  position: relative;
-  bottom: 70px;
-  margin: 10px;
-  overflow: hidden;
-}
 
 .social-list {
   list-style-type: none;

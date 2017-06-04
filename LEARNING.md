@@ -72,3 +72,15 @@ Media Queries with Sass
         @include mobile {
           background-color: papayawhip;
         }
+
+Iteration 4
+^^^^^^^^^^^
+
+Responsive Styling
+  - So many different device sizes now. Creating an Lg Mobile for iphone 6 and 6+
+  - Looking for better naming conventions
+  - Difference between REM and EM:
+      - Both relative measures of pixels.
+      - REM is relative to the page(html) font-size, which is usually 16px but can very by browser
+      - EM is relative to the font-size of the current element or parent element from inheritance.
+      - https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984

@@ -9,27 +9,36 @@ body {
   // font-family: 'PT Sans', sans-serif;
   font-family: 'Droid Sans Mono', monospace;
   position: fixed;
-  letter-spacing: 6px;
+  letter-spacing: 4.2px;
   margin: 0;
+  background-color: rgb(199, 164, 246);
 
-  @include mobile {
+
+  // 375 < mobile-lg < 768
+  @include mobile-lg {
     background-color: papayawhip;
-  }
+  };
 
-  @include tabletDesktop {
+  // 768 < tablet < 1200
+  @include tablet {
     background-color: rgb(85, 154, 222);
+  };
+
+  // 1200 < tablet
+  @include desktop {
+    background-color: lightblue;
   };
 
   header {
     height: 15%;
-    @include tabletDesktop {
+    @include desktop {
       height: 20%;
     }
   }
 
   main {
     height: 85%;
-    @include tabletDesktop {
+    @include desktop {
       height: 80%;
     }
   }
@@ -40,14 +49,23 @@ body {
 
   h1 {
     font-size: 26px;
+    @include mobile-lg {
+      font-size: 30px;
+    }
     @include tabletDesktop {
-      font-size: 65px;
+      font-size: 60px;
+    }
+    @include desktop {
+      font-size: 70px;
     }
   }
   h2 {
     font-size: 10px;
+    @include mobile-lg {
+      font-size: 12px;
+    }
     @include tabletDesktop {
-      font-size: 35px;
+      font-size: 30px;
     }
   }
   h4 {
@@ -64,14 +82,15 @@ body {
   }
   h6 {
     font-size: 16px;
+    // letter-spacing: 4.2px;
     @include tabletDesktop {
       font-size: 22px;
     }
   }
   p {
-    font-size: 8px;
+    font-size: 10px;
     @include tabletDesktop {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 }
@@ -82,7 +101,7 @@ body {
   .nav-left {
     float: left;
     width: 65%;
-    @include tabletDesktop {
+    @include desktop {
       width: 80%;
     }
   }
@@ -91,10 +110,10 @@ body {
     width: 35%;
     text-align: right;
     text-transform: uppercase;
-    letter-spacing: 4.2px;
-    @include tabletDesktop {
+    // letter-spacing: 4.2px;
+    @include desktop {
       width: 20%;
-      letter-spacing: inherit;
+      // letter-spacing: inherit;
     }
   }
 }
@@ -102,9 +121,18 @@ body {
 .project-list {
   list-style-type: none;
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 2px 0 0 0;
+  @include mobile-lg {
+    padding: 5px 0 0 0;
+  }
+  // padding: 10px 0 0 0;
   .list-item {
     width: 100%;
+    line-height: 1.0;
+    @include tabletDesktop {
+      line-height: 1.4;
+      padding: 6px 0 0 0;
+    }
     .list-counter {
       margin: 0;
       display: none;
@@ -140,7 +168,13 @@ body {
 
 .main {
   overflow: hidden;
-  margin: 0 10px;
+  margin: 10px;
+  @include mobile-lg {
+    margin-top: 30px;
+  }
+  @include tablet {
+    margin-top: 50px;
+  }
   .main-body {
     overflow: hidden;
     // @include tabletDesktop {
@@ -180,28 +214,31 @@ body {
       };
       .main-copy {
         padding: 30px 0;
+        @include mobile-lg {
+          padding: 40px 0;
+        }
+        @include tabletDesktop {
+          padding: 50px 0;
+        }
       }
       .main-skills {
         width: 90%;
-        @include tabletDesktop {
-          padding-top: 30px;
+        @include mobile-lg {
+          width: 70%;
+        }
+        @include desktop {
+          width: 60%;
         }
       }
     }
   }
   .main-footer {
-    // position: relative;
     overflow: hidden;
     clear: both;
     margin-top: 40px;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    @include tabletDesktop{
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-    };
+    bottom: 10px;
+    right: 10px;
   }
 }
 
@@ -214,9 +251,12 @@ body {
   .list-item {
     float: left;
     padding-left: 15px;
-  }
-  a {
-    color: inherit;
+    .list-group-item {
+      color: inherit;
+      i {
+        font-size: 1.6rem;
+      }
+    }
   }
 }
 

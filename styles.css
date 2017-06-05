@@ -128,10 +128,8 @@ body {
 
 .main {
   overflow: hidden;
-  margin: 10px; }
-  @media screen and (min-width: 374px) and (max-width: 759px) {
-    .main {
-      margin-top: 30px; } }
+  margin: 10px;
+  margin-top: 30px; }
   @media screen and (min-width: 760px) and (max-width: 1019px) {
     .main {
       margin-top: 50px; } }

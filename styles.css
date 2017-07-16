@@ -6,16 +6,8 @@ body {
   position: fixed;
   letter-spacing: 4.2px;
   margin: 0;
-  background-color: #c7a4f6; }
-  @media screen and (min-width: 374px) and (max-width: 759px) {
-    body {
-      background-color: papayawhip; } }
-  @media screen and (min-width: 760px) and (max-width: 1019px) {
-    body {
-      background-color: #559ade; } }
-  @media screen and (min-width: 1020px) {
-    body {
-      background-color: lightblue; } }
+  background-color: #fff;
+  color: #666666; }
   body header {
     height: 15%; }
     @media screen and (min-width: 1020px) {
@@ -29,10 +21,11 @@ body {
   body h1, body h2, body h4, body h5, body h6, body p {
     margin: 0; }
   body h1 {
+    color: #2CC0B3;
     font-size: 26px; }
     @media screen and (min-width: 374px) and (max-width: 759px) {
       body h1 {
-        font-size: 30px; } }
+        font-size: 32px; } }
     @media screen and (min-width: 760px) {
       body h1 {
         font-size: 60px; } }
@@ -40,20 +33,26 @@ body {
       body h1 {
         font-size: 70px; } }
   body h2 {
-    font-size: 10px; }
+    font-size: 12px; }
     @media screen and (min-width: 374px) and (max-width: 759px) {
       body h2 {
-        font-size: 12px; } }
+        font-size: 14px; } }
     @media screen and (min-width: 760px) {
       body h2 {
         font-size: 30px; } }
   body h4 {
-    font-size: 20px; }
+    font-size: 18px; }
+    @media screen and (min-width: 374px) and (max-width: 759px) {
+      body h4 {
+        font-size: 20px; } }
     @media screen and (min-width: 760px) {
       body h4 {
-        font-size: 32px; } }
+        font-size: 28px; } }
   body h5 {
     font-size: 16px; }
+    @media screen and (min-width: 374px) and (max-width: 759px) {
+      body h5 {
+        font-size: 18px; } }
     @media screen and (min-width: 760px) {
       body h5 {
         font-size: 26px; } }
@@ -61,7 +60,7 @@ body {
     font-size: 16px; }
     @media screen and (min-width: 760px) {
       body h6 {
-        font-size: 22px; } }
+        font-size: 24px; } }
   body p {
     font-size: 10px; }
     @media screen and (min-width: 760px) {
@@ -95,26 +94,29 @@ body {
       padding: 5px 0 0 0; } }
   .project-list .list-item {
     width: 100%;
-    line-height: 1.0; }
-    @media screen and (min-width: 760px) {
+    line-height: 0.8; }
+    @media screen and (min-width: 760px) and (max-width: 1019px) {
       .project-list .list-item {
-        line-height: 1.4;
         padding: 6px 0 0 0; } }
+    @media screen and (min-width: 1020px) {
+      .project-list .list-item {
+        line-height: 0.8; } }
     .project-list .list-item .list-counter {
       margin: 0;
       display: none; }
     .project-list .list-item .list-line {
       margin: 3px 0;
       display: inline-block;
-      background: black;
-      height: 4px;
+      background: #666666;
+      height: 2.5px;
       width: 35px; }
       @media screen and (min-width: 760px) {
         .project-list .list-item .list-line {
-          width: 60px; } }
+          width: 60px;
+          height: 4px; } }
     .project-list .list-item:hover .list-counter {
       display: inline-block;
-      color: violet;
+      color: #2CC0B3;
       -webkit-animation-name: example;
       /* Safari 4.0 - 8.0 */
       -webkit-animation-duration: 10s;
@@ -124,12 +126,11 @@ body {
       animation-duration: 1s;
       animation-fill-mode: both; }
     .project-list .list-item:hover .list-line {
-      background: violet; }
+      background: #2CC0B3; }
 
 .main {
   overflow: hidden;
-  margin: 10px;
-  margin-top: 30px; }
+  margin: 10px; }
   @media screen and (min-width: 760px) and (max-width: 1019px) {
     .main {
       margin-top: 50px; } }
@@ -151,7 +152,7 @@ body {
         text-align: left;
         position: relative; }
         .main .main-body .main-left figure img {
-          width: 84%; }
+          width: 85%; }
           @media screen and (min-width: 760px) {
             .main .main-body .main-left figure img {
               position: absolute;
@@ -161,17 +162,16 @@ body {
       width: 100%; }
       @media screen and (min-width: 1020px) {
         .main .main-body .main-right {
-          padding-top: 30px;
           float: right;
           width: 50%; } }
       .main .main-body .main-right .main-copy {
-        padding: 30px 0; }
+        padding: 10px 0 30px 0; }
         @media screen and (min-width: 374px) and (max-width: 759px) {
           .main .main-body .main-right .main-copy {
-            padding: 40px 0; } }
+            padding: 10px 0 40px 0; } }
         @media screen and (min-width: 760px) {
           .main .main-body .main-right .main-copy {
-            padding: 50px 0; } }
+            padding: 0 0 50px 0; } }
       .main .main-body .main-right .main-skills {
         width: 90%; }
         @media screen and (min-width: 374px) and (max-width: 759px) {
@@ -179,7 +179,7 @@ body {
             width: 70%; } }
         @media screen and (min-width: 1020px) {
           .main .main-body .main-right .main-skills {
-            width: 60%; } }
+            width: 55%; } }
   .main .main-footer {
     overflow: hidden;
     clear: both;
@@ -192,14 +192,15 @@ body {
   list-style-type: none;
   overflow: hidden;
   float: right;
-  margin: 0; }
+  margin: 0;
+  color: #2CC0B3; }
   .social-list .list-item {
     float: left;
     padding-left: 15px; }
     .social-list .list-item .list-group-item {
       color: inherit; }
       .social-list .list-item .list-group-item i {
-        font-size: 1.6rem; }
+        font-size: 1.8rem; }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {

@@ -84,3 +84,11 @@ Responsive Styling
       - REM is relative to the page(html) font-size, which is usually 16px but can very by browser
       - EM is relative to the font-size of the current element or parent element from inheritance.
       - https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
+
+
+Iteration 5
+^^^^^^^^^^^
+
+Naming Conventions - BEM
+  - Block Element Modifier
+  - 

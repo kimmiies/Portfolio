@@ -18,28 +18,26 @@
 
     <header class='nav'>
 
-  <!-- Name  -->
-      <div class='nav-left'>
+      <div class='nav__left'>
         <h1>Kimberly Oleiro</h1>
       </div>
 
-  <!-- Projects  -->
-      <div class='nav-right'>
+      <div class='nav__right'>
         <div>
           <h2>Projects</h2>
         </div>
 
         <div>
           <ul class='project-list'>
-            <li class="list-item">
+            <li class='project-list__item'>
               <p class="list-counter">01/03</p>
               <a class="list-counter-link" target="_blank" href="http://dindrdates.herokuapp.com/"><figure class="list-line"></figure></a>
             </li>
-            <li class="list-item" >
+            <li class='project-list__item'>
               <p class="list-counter">02/03</p>
               <a class"list-counter-link" target="_blank" href="http://www.telus.com/en/on/mobility/tablets/ipad-32/"><figure class="list-line"></figure></a>
             </li>
-            <li class="list-item">
+            <li class='project-list__item'>
               <p class="list-counter">03/03</p>
               <a class"list-counter-link" target="_blank" href="https://www.telus.com/en/on/mobility/essentialPhone"><figure class="list-line"></figure></a>
             </li>
@@ -50,24 +48,22 @@
 
     <main class='main'>
       <div class='main-body'>
-      <!-- Main Image  -->
-        <div class='main-left'>
+
+        <div class='main-body__left'>
           <figure>
             <img class='' src="./assets/headshot1.png" alt="">
           </figure>
         </div>
 
-      <!-- Main Copy  -->
-        <div class='main-right'>
+        <div class='main-body__right'>
 
-          <div class='main-copy'>
-            <h4>Hi! I'm Kim, a Toronto based web developer currently building in Node.js, React & Redux. I love making complexity seem simple; writing eloquent code to solution real world problems.
+          <div class='introduction-copy'>
+            <h4>Hi! I'm Kim, a Toronto based web developer currently building universal JavaScript applications with React and Redux. I love making complexity seem simple; writing eloquent code to solution real world problems.
             </h4>
           </div>
 
-          <div class='main-skills'>
+          <div class='skills-list'>
             <h5>Technical Stuff: <span class='element'></span> </h5>
-            <!-- <div class='element'></div> -->
             <div class='typed-cursor'></div>
           </div>
         </div>
@@ -76,24 +72,22 @@
       <footer class='main-footer'>
         <div>
           <ul class='social-list'>
-            <li class='list-item'>
-              <a class="list-group-item" href="https://www.linkedin.com/in/kimberlyoleiro/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+            <li class='social-list__item'>
+              <a class="social-list__item-link" target="_blank" href="https://www.linkedin.com/in/kimberlyoleiro/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
             </li>
-            <li class='list-item'>
-              <a class="list-group-item" href="https://twitter.com/Koleiro"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+            <li class='social-list__item'>
+              <a class="social-list__item-link" target="_blank" href="https://twitter.com/Koleiro"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
             </li>
-            <li class='list-item'>
-              <a class="list-group-item" href="https://github.com/kimmiies?tab=repositories"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+            <li class='social-list__item'>
+              <a class="social-list__item-link" target="_blank" href="https://github.com/kimmiies?tab=repositories"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
             </li>
-            <li class='list-item'>
-              <a class="list-group-item" href="mailto:koleiro@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+            <li class='social-list__item'>
+              <a class="social-list__item-link" href="mailto:koleiro@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
             </li>
           </ul>
         </div>
       </footer>
     </main>
-
-
 
   </body>
 
@@ -113,7 +107,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function(){
         Typed.new('.element', {
-          strings: ["Javascript.", "ES5 and ES6.", "Ruby.", "Rails", "ReactJS.", "JQuery.", "CSS3.", "SASS.","HTML5.", "Ruby.", "Git.", "Gulp.", "Node.js.", "Express.js." , "Grunt." , "Jasmine.", "Photoshop.", "Sketch."],
+          strings: ["Javascript.", "ES5 and ES6.", "Ruby.", "Rails.", "ReactJS.", "Redux.", "JQuery.", "CSS3.", "SASS.", "HTML5.", "Ruby.", "Git.", "Github.", "Gulp.", "Node.js.", "Express.js.", "Jasmine.", "Enyzme.", "Jest"],
           typeSpeed: 80,
           backDelay: 1000,
           loop: true,

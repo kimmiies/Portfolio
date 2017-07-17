@@ -41,7 +41,7 @@ body {
       body h2 {
         font-size: 30px; } }
   body h4 {
-    font-size: 18px; }
+    font-size: 16px; }
     @media screen and (min-width: 374px) and (max-width: 759px) {
       body h4 {
         font-size: 20px; } }
@@ -49,7 +49,7 @@ body {
       body h4 {
         font-size: 28px; } }
   body h5 {
-    font-size: 16px; }
+    font-size: 15px; }
     @media screen and (min-width: 374px) and (max-width: 759px) {
       body h5 {
         font-size: 18px; } }
@@ -70,19 +70,19 @@ body {
 .nav {
   overflow: hidden;
   margin: 10px; }
-  .nav .nav-left {
+  .nav .nav__left {
     float: left;
     width: 65%; }
     @media screen and (min-width: 1020px) {
-      .nav .nav-left {
+      .nav .nav__left {
         width: 80%; } }
-  .nav .nav-right {
+  .nav .nav__right {
     float: right;
     width: 35%;
     text-align: right;
     text-transform: uppercase; }
     @media screen and (min-width: 1020px) {
-      .nav .nav-right {
+      .nav .nav__right {
         width: 20%; } }
 
 .project-list {
@@ -92,29 +92,29 @@ body {
   @media screen and (min-width: 374px) and (max-width: 759px) {
     .project-list {
       padding: 5px 0 0 0; } }
-  .project-list .list-item {
+  .project-list .project-list__item {
     width: 100%;
     line-height: 0.8; }
     @media screen and (min-width: 760px) and (max-width: 1019px) {
-      .project-list .list-item {
+      .project-list .project-list__item {
         padding: 6px 0 0 0; } }
     @media screen and (min-width: 1020px) {
-      .project-list .list-item {
+      .project-list .project-list__item {
         line-height: 0.8; } }
-    .project-list .list-item .list-counter {
+    .project-list .project-list__item .list-counter {
       margin: 0;
       display: none; }
-    .project-list .list-item .list-line {
+    .project-list .project-list__item .list-line {
       margin: 3px 0;
       display: inline-block;
       background: #666666;
       height: 2.5px;
       width: 35px; }
       @media screen and (min-width: 760px) {
-        .project-list .list-item .list-line {
+        .project-list .project-list__item .list-line {
           width: 60px;
           height: 4px; } }
-    .project-list .list-item:hover .list-counter {
+    .project-list .project-list__item:hover .list-counter {
       display: inline-block;
       color: #2CC0B3;
       -webkit-animation-name: example;
@@ -125,7 +125,7 @@ body {
       animation-name: example;
       animation-duration: 1s;
       animation-fill-mode: both; }
-    .project-list .list-item:hover .list-line {
+    .project-list .project-list__item:hover .list-line {
       background: #2CC0B3; }
 
 .main {
@@ -136,49 +136,52 @@ body {
       margin-top: 50px; } }
   .main .main-body {
     overflow: hidden; }
-    .main .main-body .main-left {
+    .main .main-body .main-body__left {
       display: none; }
       @media screen and (min-width: 760px) {
-        .main .main-body .main-left {
+        .main .main-body .main-body__left {
           display: block;
           position: absolute;
           bottom: 0;
           width: 70%; } }
       @media screen and (min-width: 1020px) {
-        .main .main-body .main-left {
+        .main .main-body .main-body__left {
           width: 50%; } }
-      .main .main-body .main-left figure {
+      .main .main-body .main-body__left figure {
         margin: 0;
         text-align: left;
         position: relative; }
-        .main .main-body .main-left figure img {
+        .main .main-body .main-body__left figure img {
           width: 85%; }
           @media screen and (min-width: 760px) {
-            .main .main-body .main-left figure img {
+            .main .main-body .main-body__left figure img {
               position: absolute;
               bottom: 0; } }
-    .main .main-body .main-right {
+    .main .main-body .main-body__right {
       float: left;
       width: 100%; }
       @media screen and (min-width: 1020px) {
-        .main .main-body .main-right {
+        .main .main-body .main-body__right {
           float: right;
           width: 50%; } }
-      .main .main-body .main-right .main-copy {
+      .main .main-body .main-body__right .introduction-copy {
         padding: 10px 0 30px 0; }
         @media screen and (min-width: 374px) and (max-width: 759px) {
-          .main .main-body .main-right .main-copy {
+          .main .main-body .main-body__right .introduction-copy {
             padding: 10px 0 40px 0; } }
         @media screen and (min-width: 760px) {
-          .main .main-body .main-right .main-copy {
+          .main .main-body .main-body__right .introduction-copy {
             padding: 0 0 50px 0; } }
-      .main .main-body .main-right .main-skills {
+      .main .main-body .main-body__right .skills-list {
         width: 90%; }
         @media screen and (min-width: 374px) and (max-width: 759px) {
-          .main .main-body .main-right .main-skills {
-            width: 70%; } }
+          .main .main-body .main-body__right .skills-list {
+            width: 75%; } }
+        @media screen and (min-width: 760px) and (max-width: 1019px) {
+          .main .main-body .main-body__right .skills-list {
+            width: 100%; } }
         @media screen and (min-width: 1020px) {
-          .main .main-body .main-right .main-skills {
+          .main .main-body .main-body__right .skills-list {
             width: 55%; } }
   .main .main-footer {
     overflow: hidden;
@@ -194,12 +197,12 @@ body {
   float: right;
   margin: 0;
   color: #2CC0B3; }
-  .social-list .list-item {
+  .social-list .social-list__item {
     float: left;
     padding-left: 15px; }
-    .social-list .list-item .list-group-item {
+    .social-list .social-list__item .social-list__item-link {
       color: inherit; }
-      .social-list .list-item .list-group-item i {
+      .social-list .social-list__item .social-list__item-link i {
         font-size: 1.8rem; }
 
 /* Safari 4.0 - 8.0 */

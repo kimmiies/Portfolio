@@ -5,8 +5,6 @@ html, body {
 }
 
 body {
-  // background: papayawhip;
-  // font-family: 'PT Sans', sans-serif;
   font-family: 'Droid Sans Mono', monospace;
   position: fixed;
   letter-spacing: 4.2px;
@@ -14,21 +12,6 @@ body {
   background-color: #fff;
   color: #666666;
 
-
-  // 375 < mobile-lg < 768
-  @include mobile-lg {
-    // background-color: papayawhip;
-  };
-
-  // 768 < tablet < 1200
-  @include tablet {
-    // background-color: rgb(85, 154, 222);
-  };
-
-  // 1200 < tablet
-  @include desktop {
-    // background-color: lightblue;
-  };
 
   header {
     height: 15%;
@@ -71,7 +54,7 @@ body {
     }
   }
   h4 {
-    font-size: 18px;
+    font-size: 16px;
     @include mobile-lg {
       font-size: 20px;
     }
@@ -80,7 +63,7 @@ body {
     }
   }
   h5 {
-    font-size: 16px;
+    font-size: 15px;
     @include mobile-lg {
       font-size: 18px;
     }
@@ -106,22 +89,20 @@ body {
 .nav {
   overflow: hidden;
   margin: 10px;
-  .nav-left {
+  .nav__left {
     float: left;
     width: 65%;
     @include desktop {
       width: 80%;
     }
   }
-  .nav-right {
+  .nav__right {
     float: right;
     width: 35%;
     text-align: right;
     text-transform: uppercase;
-    // letter-spacing: 4.2px;
     @include desktop {
       width: 20%;
-      // letter-spacing: iherit;
     }
   }
 }
@@ -133,12 +114,10 @@ body {
   @include mobile-lg {
     padding: 5px 0 0 0;
   }
-  // padding: 10px 0 0 0;
-  .list-item {
+  .project-list__item {
     width: 100%;
     line-height: 0.8;
     @include tablet {
-      // line-height: 1.4;
       padding: 6px 0 0 0;
     }
     @include desktop {
@@ -187,10 +166,7 @@ body {
   }
   .main-body {
     overflow: hidden;
-    // @include tabletDesktop {
-    //   height: 100%;
-    // }
-    .main-left {
+    .main-body__left {
       display: none;
       @include tabletDesktop {
         display: block;
@@ -208,25 +184,22 @@ body {
         img {
           width: 85%;
           @include tabletDesktop {
-            // width: 90%;
             position: absolute;
             bottom: 0;
           }
           @include desktop {
-            // width: 84%;
           }
         }
       }
     }
-    .main-right {
+    .main-body__right {
       float: left;
       width: 100%;
       @include desktop {
-        // padding-top: 30px;
         float: right;
         width: 50%;
       };
-      .main-copy {
+      .introduction-copy {
         padding: 10px 0 30px 0;
         @include mobile-lg {
           padding: 10px 0 40px 0;
@@ -235,10 +208,13 @@ body {
           padding: 0 0 50px 0;
         }
       }
-      .main-skills {
+      .skills-list {
         width: 90%;
         @include mobile-lg {
-          width: 70%;
+          width: 75%;
+        }
+        @include tablet {
+          width: 100%;
         }
         @include desktop {
           width: 55%;
@@ -263,10 +239,10 @@ body {
   float: right;
   margin: 0;
   color: #2CC0B3;
-  .list-item {
+  .social-list__item {
     float: left;
     padding-left: 15px;
-    .list-group-item {
+    .social-list__item-link {
       color: inherit;
       i {
         font-size: 1.8rem;

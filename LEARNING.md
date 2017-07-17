@@ -91,4 +91,6 @@ Iteration 5
 
 Naming Conventions - BEM
   - Block Element Modifier
-  - 
+  - :D
+GitHub Pages
+  - Pages goes live ... woo! 

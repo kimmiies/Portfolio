@@ -93,4 +93,15 @@ Naming Conventions - BEM
   - Block Element Modifier
   - :D
 GitHub Pages
-  - Pages goes live ... woo! 
+  - Pages goes live ... woo!
+
+
+Iteration 6
+^^^^^^^^^^^^
+
+Responsive Meta Tag
+  - Media queries were not working in certain browsers or phone although testing well in Safari.
+  - Must add to the head <meta name="viewport" content="width=device-width">
+  - This means that the browser will (probably) render the width of the page at the width of its own screen. So if that screen is 320px wide, the browser window will be 320px wide. GOOD TO KNOW.
+Adding Icon to title tab
+  - <link rel="icon" href="assets/pineapple.png" type="sparkle icon">

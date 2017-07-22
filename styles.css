@@ -128,62 +128,62 @@ body {
     .project-list .project-list__item:hover .list-line {
       background: #2CC0B3; }
 
-.main {
+.main__container {
   overflow: hidden;
   margin: 10px; }
   @media screen and (min-width: 760px) and (max-width: 1019px) {
-    .main {
+    .main__container {
       margin-top: 50px; } }
-  .main .main-body {
+  .main__container .main-body {
     overflow: hidden; }
-    .main .main-body .main-body__left {
+    .main__container .main-body .main-body__left {
       display: none; }
       @media screen and (min-width: 760px) {
-        .main .main-body .main-body__left {
+        .main__container .main-body .main-body__left {
           display: block;
           position: absolute;
           bottom: 0;
           width: 70%; } }
       @media screen and (min-width: 1020px) {
-        .main .main-body .main-body__left {
+        .main__container .main-body .main-body__left {
           width: 50%; } }
-      .main .main-body .main-body__left figure {
+      .main__container .main-body .main-body__left figure {
         margin: 0;
         text-align: left;
         position: relative; }
-        .main .main-body .main-body__left figure img {
+        .main__container .main-body .main-body__left figure img {
           width: 85%; }
           @media screen and (min-width: 760px) {
-            .main .main-body .main-body__left figure img {
+            .main__container .main-body .main-body__left figure img {
               position: absolute;
               bottom: 0; } }
-    .main .main-body .main-body__right {
+    .main__container .main-body .main-body__right {
       float: left;
       width: 100%; }
       @media screen and (min-width: 1020px) {
-        .main .main-body .main-body__right {
+        .main__container .main-body .main-body__right {
           float: right;
           width: 50%; } }
-      .main .main-body .main-body__right .introduction-copy {
+      .main__container .main-body .main-body__right .introduction-copy {
         padding: 10px 0 30px 0; }
         @media screen and (min-width: 374px) and (max-width: 759px) {
-          .main .main-body .main-body__right .introduction-copy {
+          .main__container .main-body .main-body__right .introduction-copy {
             padding: 10px 0 40px 0; } }
         @media screen and (min-width: 760px) {
-          .main .main-body .main-body__right .introduction-copy {
+          .main__container .main-body .main-body__right .introduction-copy {
             padding: 0 0 50px 0; } }
-      .main .main-body .main-body__right .skills-list {
+      .main__container .main-body .main-body__right .skills-list {
         width: 90%; }
         @media screen and (min-width: 374px) and (max-width: 759px) {
-          .main .main-body .main-body__right .skills-list {
+          .main__container .main-body .main-body__right .skills-list {
             width: 75%; } }
         @media screen and (min-width: 760px) and (max-width: 1019px) {
-          .main .main-body .main-body__right .skills-list {
+          .main__container .main-body .main-body__right .skills-list {
             width: 100%; } }
         @media screen and (min-width: 1020px) {
-          .main .main-body .main-body__right .skills-list {
+          .main__container .main-body .main-body__right .skills-list {
             width: 55%; } }
-  .main .main-footer {
+  .main__container .main-footer {
     overflow: hidden;
     clear: both;
     margin-top: 40px;

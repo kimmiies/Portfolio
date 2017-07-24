@@ -8,16 +8,6 @@ body {
   margin: 0;
   background-color: #fff;
   color: #666666; }
-  body header {
-    height: 15%; }
-    @media screen and (min-width: 1020px) {
-      body header {
-        height: 20%; } }
-  body main {
-    height: 85%; }
-    @media screen and (min-width: 1020px) {
-      body main {
-        height: 80%; } }
   body h1, body h2, body h4, body h5, body h6, body p {
     margin: 0; }
   body h1 {
@@ -165,13 +155,16 @@ body {
           float: right;
           width: 50%; } }
       .main__container .main-body .main-body__right .introduction-copy {
-        padding: 10px 0 30px 0; }
+        padding: 30px 0; }
         @media screen and (min-width: 374px) and (max-width: 759px) {
           .main__container .main-body .main-body__right .introduction-copy {
-            padding: 10px 0 40px 0; } }
-        @media screen and (min-width: 760px) {
+            padding: 20px 0 40px 0; } }
+        @media screen and (min-width: 760px) and (max-width: 1019px) {
           .main__container .main-body .main-body__right .introduction-copy {
             padding: 0 0 50px 0; } }
+        @media screen and (min-width: 1020px) {
+          .main__container .main-body .main-body__right .introduction-copy {
+            padding: 30px 0 50px 0; } }
       .main__container .main-body .main-body__right .skills-list {
         width: 90%; }
         @media screen and (min-width: 374px) and (max-width: 759px) {

@@ -12,21 +12,6 @@ body {
   background-color: #fff;
   color: #666666;
 
-
-  header {
-    height: 15%;
-    @include desktop {
-      height: 20%;
-    }
-  }
-
-  main {
-    height: 85%;
-    @include desktop {
-      height: 80%;
-    }
-  }
-
   h1, h2, h4, h5, h6, p {
     margin: 0;
   }
@@ -198,12 +183,15 @@ body {
         width: 50%;
       };
       .introduction-copy {
-        padding: 10px 0 30px 0;
+        padding: 30px 0;
         @include mobile-lg {
-          padding: 10px 0 40px 0;
+          padding: 20px 0 40px 0;
         }
-        @include tabletDesktop {
+        @include tablet {
           padding: 0 0 50px 0;
+        }
+        @include desktop {
+          padding: 30px 0 50px 0;
         }
       }
       .skills-list {
